@@ -9,6 +9,11 @@ let ``Comma sprinkler, input 1`` () =
     |> should equal (Some "please, sit spot. sit spot, sit. spot, here now, here.")
 
 [<Test>]
+let ``IsText Stha``  () =
+    rivers "??????"
+    |>should equal false
+
+[<Test>]
 let ``Comma sprinkler, input 2`` () =
     commaSprinkler "one, two. one tree. four tree. four four. five four. six five."
     |> should equal (Some "one, two. one, tree. four, tree. four, four. five, four. six five.")
